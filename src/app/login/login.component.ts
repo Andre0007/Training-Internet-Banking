@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-
-
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
 import { ModalNotCadastroComponent } from '../modal-not-cadastro/modal-not-cadastro.component';
-import { SingletonRouterService } from 'src/services/singletonRouter.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class LoginComponent implements OnInit {
   formLogin;
   theEvent;
   key;
@@ -20,19 +17,18 @@ export class HeaderComponent implements OnInit {
   keys;
   getCadastro;
   message;
-  
-  constructor(private fb: FormBuilder,
+  constructor(
+    private fb: FormBuilder,
     private router: Router,
     public dialog: MatDialog) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.formLogin = this.fb.group({
       cpf: ['']
     });
   }
 
-   // regexp
-   onlynumber(evt) {
+  onlynumber(evt) {
     this.theEvent = evt || window.event;
     this.key = this.theEvent.keyCode || this.theEvent.which;
     this.key = String.fromCharCode(this.key);
@@ -65,5 +61,4 @@ export class HeaderComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-
 }
