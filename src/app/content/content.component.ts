@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-content',
@@ -8,7 +9,11 @@ import Typed from 'typed.js';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  gotoCadastroClientes() {
+    this.router.navigate(['cadastro-clientes']);
+  }
 
   ngOnInit(): void {
     const options = {
