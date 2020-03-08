@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "traning-internet-banking": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "traning-internet-banking"
+    }
+  },
+  "defaultProject": "traning-internet-banking",
+  "cli": {
+    "analytics": "656ae8e6-a81e-4ece-87cb-a789ba3b2817"
+  }
 }
