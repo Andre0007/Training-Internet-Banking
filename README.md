@@ -1,4 +1,4 @@
-# TraningInternetBanking
+# Traning Internet Banking
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5. Projeto de treinamento desenvolvendo apenas o front-end do Internet Bank, aqui apenas terá:
 
